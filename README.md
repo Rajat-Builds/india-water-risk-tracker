@@ -44,7 +44,12 @@ A live, publicly accessible dashboard that tracks:
 - [x] Backend setup — Spring Boot + MySQL connected
 - [x] DataCenter entity — mapped to `data_centers` table
 - [x] WaterUsageRecord entity — mapped to `water_usage_records` table with foreign key
-- [ ] REST API endpoints — CRUD for data centers and usage records
+- [x] GroundwaterStressLevel entity — mapped to database table
+- [x] WaterRiskScore entity — mapped to database table
+- [x] All 4 repositories created
+- [x] DataCenter CRUD API — GET, POST, PUT, DELETE all working
+- [x] First end-to-end test passed — Yotta Greater Noida record saved and retrieved via Postman
+- [ ] CRUD APIs for remaining 3 entities
 - [ ] Risk score calculation — service layer logic
 - [ ] Seed data — real Indian data center locations
 - [ ] Frontend dashboard — map view, risk scores, charts
