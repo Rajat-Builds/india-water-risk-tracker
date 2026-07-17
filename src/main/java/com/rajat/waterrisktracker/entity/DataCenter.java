@@ -37,7 +37,7 @@ public class DataCenter {
     public DataCenter() {
     }
 
-    // Getters and Setters
+    
     public Long getId() {
         return id;
     }
