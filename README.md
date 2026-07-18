@@ -42,18 +42,31 @@ A live, publicly accessible dashboard that tracks:
 ## Project Status
 
 - [x] Backend setup — Spring Boot + MySQL connected
-- [x] DataCenter entity — mapped to `data_centers` table
-- [x] WaterUsageRecord entity — mapped to `water_usage_records` table with foreign key
-- [x] GroundwaterStressLevel entity — mapped to database table
-- [x] WaterRiskScore entity — mapped to database table
+- [x] All 4 entities created and mapped to MySQL tables
 - [x] All 4 repositories created
 - [x] DataCenter CRUD API — GET, POST, PUT, DELETE all working
-- [x] First end-to-end test passed — Yotta Greater Noida record saved and retrieved via Postman
+- [x] First end-to-end test passed — full stack verified via Postman
+- [x] 10 real data centers seeded with verified, source-backed data
+- [x] Groundwater stress levels and water usage records for all 10
+- [x] Risk scores calculated and verified — 1 CRITICAL, 5 HIGH, 4 MEDIUM
+- [x] Phase 2 complete
 - [ ] CRUD APIs for remaining 3 entities
-- [ ] Risk score calculation — service layer logic
-- [ ] Seed data — real Indian data center locations
 - [ ] Frontend dashboard — map view, risk scores, charts
 - [ ] Deployment — live URL
+
+## Data Centers Tracked
+| Data Center | Company | Location | Risk Level |
+|-------------|---------|----------|------------|
+| Yotta D1 | Yotta | Greater Noida, UP | CRITICAL |
+| AWS Hyderabad | Amazon | Rangareddy, Telangana | HIGH |
+| Google Cloud | Google | Vizag, Andhra Pradesh | HIGH |
+| Microsoft Azure | Microsoft | Pune, Maharashtra | HIGH |
+| NTT Data Center | NTT | Mumbai, Maharashtra | HIGH |
+| AdaniConneX | Adani | Chennai, Tamil Nadu | HIGH |
+| STT GDC | STT | Bangalore, Karnataka | MEDIUM |
+| Meta-Sify | Meta | Vizag, Andhra Pradesh | MEDIUM |
+| TCS Data Center | TCS | Mumbai, Maharashtra | MEDIUM |
+| Reliance Jio | Reliance | Nagpur, Maharashtra | MEDIUM |
 
 ## Why I Built This
 
