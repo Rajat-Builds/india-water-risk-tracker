@@ -31,11 +31,19 @@ public class WaterRiskScoreService {
         return waterRiskScoreRepository.findById(id).orElse(null);
     }
 
+    public WaterRiskScore getLatestScoreForDataCenter(Long dataCenterId) {
+    return waterRiskScoreRepository.findAll().stream()
+        .filter(s -> s.getDataCenter().getId().equals(dataCenterId))
+        .max((a, b) -> a.getCalculatedAt().compareTo(b.getCalculatedAt()))
+        .orElse(null);
+}
+
     public WaterRiskScore calculateRiskScore(Long dataCenterId) {
         DataCenter dataCenter = dataCenterRepository.findById(dataCenterId).orElse(null);
         if (dataCenter == null) {
             return null;
         }
+
 
         // 1. Groundwater stress score
         List<GroundWaterStressLevel> stressLevels = groundWaterStressLevelRepository.findAll();
