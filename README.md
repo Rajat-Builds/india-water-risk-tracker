@@ -45,14 +45,14 @@ A live, publicly accessible dashboard that tracks:
 - [x] All 4 entities created and mapped to MySQL tables
 - [x] All 4 repositories created
 - [x] DataCenter CRUD API — GET, POST, PUT, DELETE all working
-- [x] First end-to-end test passed — full stack verified via Postman
 - [x] 10 real data centers seeded with verified, source-backed data
-- [x] Groundwater stress levels and water usage records for all 10
-- [x] Risk scores calculated and verified — 1 CRITICAL, 5 HIGH, 4 MEDIUM
-- [x] Phase 2 complete
-- [ ] CRUD APIs for remaining 3 entities
-- [ ] Frontend dashboard — map view, risk scores, charts
-- [ ] Deployment — live URL
+- [x] Risk scores calculated — 1 CRITICAL, 5 HIGH, 4 MEDIUM
+- [x] AI summary endpoint — `/api/waterriskscores/summary/{id}`
+- [x] Multi-turn AI chat endpoint — `POST /api/chat` with facility context
+- [x] Frontend v2 — dark-themed scroll-driven storytelling dashboard
+- [x] Real India SVG map with pulsing markers and company logos
+- [x] GSAP ScrollTrigger animations
+- [ ] Deployment — live URL coming soon
 
 ## Data Centers Tracked
 | Data Center | Company | Location | Risk Level |
