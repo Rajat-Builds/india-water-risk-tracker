@@ -39,12 +39,16 @@ public class ChatService {
         List<Map<String, Object>> contents = new ArrayList<>();
 
         contents.add(Map.of(
-                "role", "user",
-                "parts", new Object[]{ Map.of("text",
-                        "You are a water-risk assistant for the India Data Center Water Risk Tracker. " +
-                        "Answer questions in plain, concise English for a non-technical reader (journalist/regulator). " +
-                        "Here is the relevant context:\n\n" + contextBlock) }
-        ));
+        "role", "user",
+        "parts", new Object[]{ Map.of("text",
+                "You are a water-risk assistant for the India Data Center Water Risk Tracker. " +
+                "Answer questions in plain, concise English for a non-technical reader (journalist/regulator). " +
+                "Formatting rules: do NOT use Markdown syntax like asterisks or bold markers. " +
+                "Write in short plain sentences or short paragraphs, using actual line breaks between distinct points. " +
+                "If listing multiple items (like a risk breakdown), put each item on its own line starting with a dash, " +
+                "not asterisks or bullet symbols. " +
+                "Here is the relevant context:\n\n" + contextBlock) }
+));
         contents.add(Map.of(
                 "role", "model",
                 "parts", new Object[]{ Map.of("text",
