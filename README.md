@@ -10,6 +10,9 @@
 
 The gaps in the data aren't a bug in this project. They're the story this project tells.
 
+## 🔗 Live Demo
+**[Open the live dashboard →](https://rajat-builds.github.io/india-water-risk-tracker/)**
+
 ## What This Project Does
 
 A live, publicly accessible dashboard that tracks:
@@ -17,9 +20,7 @@ A live, publicly accessible dashboard that tracks:
 - Groundwater stress levels for each location
 - Water usage records where available — and flags where data is missing
 - A **risk score** that penalizes both high water usage AND lack of transparency
-
-## Live Demo
-🔗 *Deployment in progress — live link will be added once deployed*
+- An **AI assistant** powered by Gemini that answers questions about any data center
 
 ## Tech Stack
 
@@ -28,16 +29,19 @@ A live, publicly accessible dashboard that tracks:
 - Spring Boot 4.1.0
 - Spring Data JPA + Hibernate
 - MySQL 8
+- Gemini API (Google AI)
 - Maven
 
 **Frontend**
 - HTML5, CSS3, Vanilla JavaScript
+- GSAP ScrollTrigger — scroll-driven storytelling
+- Real India SVG map with coordinate-transformed markers
 - Native `fetch()` API — no framework
 
 **Deployment**
-- Backend: Railway / Render
-- Frontend: GitHub Pages
-- Database: Managed MySQL (cloud)
+- Backend: Railway (live)
+- Frontend: GitHub Pages (live)
+- Database: Railway managed MySQL
 
 ## Project Status
 
@@ -48,11 +52,14 @@ A live, publicly accessible dashboard that tracks:
 - [x] 10 real data centers seeded with verified, source-backed data
 - [x] Risk scores calculated — 1 CRITICAL, 5 HIGH, 4 MEDIUM
 - [x] AI summary endpoint — `/api/waterriskscores/summary/{id}`
-- [x] Multi-turn AI chat endpoint — `POST /api/chat` with facility context
+- [x] Multi-turn AI chat — `POST /api/chat` with facility context
 - [x] Frontend v2 — dark-themed scroll-driven storytelling dashboard
 - [x] Real India SVG map with pulsing markers and company logos
-- [x] GSAP ScrollTrigger animations
-- [ ] Deployment — live URL coming soon
+- [x] DataSeeder — auto-populates 10 real data centers on fresh database
+- [x] Backend deployed on Railway with environment variable config
+- [x] Frontend deployed on GitHub Pages
+- [x] CORS configured — live services talking to each other
+- [x] End-to-end verified live ✅
 
 ## Data Centers Tracked
 | Data Center | Company | Location | Risk Level |
@@ -85,8 +92,8 @@ mysql -u root -p
 CREATE DATABASE water_risk_tracker;
 
 # Configure credentials
-# Edit src/main/resources/application.properties
-# Set your MySQL username and password
+# Copy application.properties.example to application.properties
+# Set your MySQL username, password and Gemini API key
 
 # Run the application
 ./mvnw spring-boot:run
